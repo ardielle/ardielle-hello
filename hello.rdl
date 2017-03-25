@@ -1,0 +1,11 @@
+name hello
+version 1
+
+type Greeting Struct {
+     String message
+}
+
+resource Greeting GET "/greeting?sender={name}" {
+	String name (default="human")
+    expected OK
+}
