@@ -12,7 +12,7 @@ import (
 
 func main() {
 	endpoint := "localhost:4080"
-	url := "http://" + endpoint + "/hello"
+	url := "http://" + endpoint + "/hello/v1"
 	impl := new(hello.HelloImpl)
 	handler := hello.Init(impl, url, impl)
 	http.ListenAndServe(endpoint, handler)
