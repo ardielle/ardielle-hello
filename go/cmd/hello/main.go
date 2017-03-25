@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"os"
 
-	hello "../.."
+	"github.com/ardielle/ardielle-hello/go"
 )
 
 func main() {

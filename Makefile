@@ -6,10 +6,10 @@ all::
 	@echo '  java-server - run the java server'
 
 go-server::
-	@go run go/cmd/hellod/main.go
+	@(cd go; go run cmd/hellod/main.go)
 
 go-client::
-	@go run go/cmd/hello/main.go
+	@(cd go; go run cmd/hello/main.go)
 
 java-client: java-build
 	@(cd java; mvn -q compile exec:java -Dexec.mainClass="Hello")

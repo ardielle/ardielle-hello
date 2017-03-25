@@ -7,7 +7,7 @@ package main
 import (
 	"net/http"
 
-	hello "../.."
+	"github.com/ardielle/ardielle-hello/go"
 )
 
 func main() {
