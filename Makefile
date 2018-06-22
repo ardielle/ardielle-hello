@@ -23,7 +23,9 @@ java/src/main/java/HelloClient.java:
 	@(cd java; rdl generate -o target/generated-sources/rdl java-client ../hello.rdl)
 
 regenerate-go:
-	rdl generate -o go go-server-project hello.rdl
+	rdl generate -o go go-client hello.rdl && \
+		rdl generate -o go go-server hello.rdl && \
+		rdl generate -o go go-model hello.rdl
 
 clean::
 	@(cd java; mvn -q clean)
